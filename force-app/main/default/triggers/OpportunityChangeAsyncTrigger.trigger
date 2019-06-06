@@ -9,13 +9,10 @@ trigger OpportunityChangeAsyncTrigger on OpportunityChangeEvent (after insert) {
         oppIds.addAll(recordIds);
     }
     
-    System.debug(oppIds.size());
     //Perform heavy computation operation which may take a lot of time
     AccountClassifier classifier = new AccountClassifier();
     List<Account> highPriorityAccounts = classifier.classifyAccount(new List<String>(oppIds));
-    System.debug(highPriorityAccounts);
     
-
     
     //Perform any additional activity after heavy computation. 
     //You may publish platform events for possible high priority Accounts.
