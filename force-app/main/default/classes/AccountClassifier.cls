@@ -7,7 +7,7 @@
                 String accId = oppList[0].AccountId;
                 AggregateResult[] groupedResults = [SELECT sum(Amount) total FROM Opportunity WHERE AccountId = :accId];
                 Decimal totalAmount = (Decimal) groupedResults[0].get('total');
-                if(totalAmount > 50000){
+                if(totalAmount > 500000){
                  	accIds.add(accId);
                 }
             }
