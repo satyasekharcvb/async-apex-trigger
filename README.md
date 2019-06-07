@@ -19,6 +19,7 @@ Steps to configure the org for demo:
 ```
 sfdx force:auth:web:login -d -a myhuborg
 ```
+>**Note:** Use **Summer '19 org** as your hub org.
 
 3. Clone the async-apex-trigger repository:
 
